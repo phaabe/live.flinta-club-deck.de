@@ -35,7 +35,7 @@ a {
     height: 10em;
     border-style: solid;
     box-sizing: border-box;
-    background: black;
+    background: #1e191d;
 
     transition: 100ms all ease;
     will-change: border-width;
