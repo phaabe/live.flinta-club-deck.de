@@ -6,7 +6,7 @@ let live;
 
 let platform = navigator?.userAgentData?.platform || navigator?.platform || 'unknown'
 
-fetch('https://stream.moafunk.de/live/stream-io/index.m3u8', { method: 'HEAD' })
+fetch('https://stream.moafunk.de/live/fcd/index.m3u8', { method: 'HEAD' })
   .then(response => {
     if (response.status === 200) {
       document.querySelector('#status').innerHTML = 'Live now';
@@ -33,7 +33,7 @@ if (/iPhone|iPod|iPad/.test(platform)){
 
     let flvPlayer = flvjs.createPlayer({
         type: 'flv',
-        url: 'https://stream.moafunk.de/live/stream-io.flv'
+        url: 'https://stream.moafunk.de/live/fcd.flv'
     });
     flvPlayer.attachMediaElement(videoElement);
     flvPlayer.load();
